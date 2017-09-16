@@ -9,6 +9,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageFile Include=".\build\prefercliruntime"/>
+    <PackageFile Include=".\build\Microsoft.XmlSerializer.Generator.props">
+      <TargetPath>build\</TargetPath>
+    </PackageFile>
     <PackageFile Include=".\build\Microsoft.XmlSerializer.Generator.targets">
       <TargetPath>build\</TargetPath>
     </PackageFile>
@@ -17,5 +20,4 @@
     </PackageFile>
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
-  <Import Project=".\GenerateNupkgProps.targets" />
 </Project>
